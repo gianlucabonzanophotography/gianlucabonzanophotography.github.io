@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Gianluca Bonzano",
+    "wordmark_first": "Gianluca",
+    "wordmark_last": "Bonzano",
+    "tagline_practice": "Landscape & Aerial · Cityscape & Architecture · Street & Portrait",
+    "tagline_period": "Selected work, 2019 — present",
+    "footer_copyright": "© Gianluca Bonzano",
+    "footer_legal": "All photographs · 2019 — 2026",
+    "contact": {
+      "email": "gianluca.bonzano@live.com",
+      "based_in": "Luxembourg"
+    },
+    "hero_image": "images/landscape/006-lago-nero-brenta.jpg",
+    "portrait_image": "images/bio/portrait.jpg"
+  },
+  "galleries": {
+    "landscape": {
+      "number": "01",
+      "title": "Landscape & Aerial.",
+      "blurb_home": "Natural environments observed through light.",
+      "blurb_full": "-"
+    },
+    "cityscape": {
+      "number": "02",
+      "title": "Cityscape & Architecture.",
+      "blurb_home": "Urban environments, structures, and the geometry of built space.",
+      "blurb_full": "-."
+    },
+    "street": {
+      "number": "03",
+      "title": "Street & Portrait.",
+      "blurb_home": "Everyday public life captured in real time.",
+      "blurb_full": "-"
+    },
+    "video": {
+      "number": "04",
+      "title": "Video.",
+      "blurb_home": "Cinematic journeys through distant worlds.",
+      "blurb_full": "-"
+    }
+  },
+  "about": {
+    "title": "About.",
+    "paragraphs": [
+      "A personal collection of landscape, cityscape, and street photography.",
+      "My photography is a journey between the power of nature and the intensity of human experience. I combine the wonder of natural landscapes with the strength of social documentary photography to give voice to authentic visual stories that inspire emotion and spark curiosity about the world around us."
+    ]
+  }
+}

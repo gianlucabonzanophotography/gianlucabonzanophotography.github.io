@@ -1,0 +1,411 @@
+/* ============================================================
+   Gianluca Bonzano — Photography
+   Cinema mode: pure black, white text, image-first.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap");
+
+:root {
+  --black: #000;
+  --ink:   #0a0a0a;
+  --white: #ffffff;
+  --bone:  #ededed;
+  --ash:   #b8b8b8;
+  --smoke: #6e6e6e;
+  --rule:  #2a2a2a;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+  --font-body:    "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  --ls-overline: 0.22em;
+  --dur-quick:  160ms;
+  --dur-base:   240ms;
+  --dur-cinema: 800ms;
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+
+  --gutter: clamp(20px, 4vw, 56px);
+  --max-w:  1600px;
+
+  --header-h: 64px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--black);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* IMAGES — never the click target, never draggable, never long-press save */
+img {
+  display: block; max-width: 100%; height: auto;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.about .copy, .about .copy *, .gallery-head, .lb-cap, .hero-content,
+.site-footer, .site-header, .gallery-row .meta {
+  -webkit-user-select: text; user-select: text;
+}
+
+a { color: var(--bone); text-decoration: none; transition: color var(--dur-quick) var(--ease-out); }
+a:hover { color: var(--white); }
+::selection { background: var(--white); color: var(--black); }
+:focus-visible { outline: 1px solid var(--bone); outline-offset: 4px; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+.overline { font-family: var(--font-body); font-size: 11px; font-weight: 500; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); margin: 0; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-base) var(--ease-out);
+}
+.site-header.scrolled { border-bottom-color: var(--rule); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+.wordmark { font-family: var(--font-display); font-size: 18px; font-weight: 400; letter-spacing: 0.02em; color: var(--bone); white-space: nowrap; }
+.wordmark:hover { color: var(--white); }
+.wordmark .dot { display: inline-block; width: 0; height: 0; }
+.site-nav { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.site-nav a { font-size: 12px; font-weight: 400; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--ash); position: relative; padding: 4px 0; }
+.site-nav a:hover { color: var(--white); }
+.site-nav a[aria-current="page"] { color: var(--white); }
+.site-nav a[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); width: 3px; height: 3px; background: var(--white); border-radius: 50%; }
+
+@media (max-width: 860px) {
+  :root { --header-h: auto; }
+  .site-header .wrap {
+    height: auto;
+    padding-top: 12px; padding-bottom: 12px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .wordmark { font-size: 16px; }
+  .site-nav {
+    gap: 12px 18px;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+  .site-nav a { font-size: 10.5px; letter-spacing: 0.16em; padding: 2px 0; }
+}
+@media (max-width: 380px) {
+  .site-nav { gap: 10px 12px; }
+  .site-nav a { font-size: 10px; letter-spacing: 0.14em; }
+}
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--rule); margin-top: 120px; padding: 56px 0 48px; }
+.site-footer .wrap { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+.site-footer .col { display: flex; flex-direction: column; gap: 6px; }
+.site-footer .label { font-size: 10px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); }
+.site-footer .val { font-size: 14px; color: var(--ash); }
+.site-footer a.val:hover { color: var(--white); }
+.site-footer .legal { font-size: 11px; color: var(--smoke); letter-spacing: 0.04em; }
+
+/* ---------- Hero (homepage) ---------- */
+.hero { position: relative; height: min(72vh, 760px); min-height: 480px; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: cinemaFade var(--dur-cinema) var(--ease-out) forwards; }
+.hero-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55) 88%, rgba(0,0,0,0.85) 100%); }
+.hero-content { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 var(--gutter) 56px; max-width: var(--max-w); margin: 0 auto; }
+.hero-name { font-family: var(--font-display); font-weight: 300; font-size: clamp(36px, 7.5vw, 84px); line-height: 0.98; letter-spacing: -0.02em; color: var(--white); margin: 0; opacity: 0; animation: cinemaUp var(--dur-cinema) var(--ease-out) 200ms forwards; }
+.hero-meta { margin-top: 20px; display: flex; gap: 40px; flex-wrap: wrap; opacity: 0; animation: cinemaUp var(--dur-cinema) var(--ease-out) 480ms forwards; }
+.hero-meta .item .label { font-size: 10px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); margin-bottom: 4px; }
+.hero-meta .item .val { color: var(--bone); font-size: 14px; }
+
+@media (max-width: 760px) {
+  .hero { height: calc(100svh - 120px); min-height: 420px; max-height: 720px; }
+  .hero-content { padding: 0 var(--gutter) 28px; }
+  .hero-name { font-size: clamp(36px, 11vw, 64px); line-height: 1.0; }
+  .hero-meta { margin-top: 14px; gap: 18px; }
+}
+@media (max-width: 420px) { .hero { height: calc(100svh - 110px); } }
+
+@keyframes cinemaFade { to { opacity: 1; } }
+@keyframes cinemaUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ---------- Index of galleries (homepage) ---------- */
+.section-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 18px; margin-bottom: 56px; }
+.section-head .num { font-family: var(--font-body); font-size: 11px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); }
+.galleries-index { padding: 96px 0 64px; }
+
+.gallery-row { display: grid; grid-template-columns: 1fr 2fr; gap: clamp(24px, 4vw, 64px); padding: 72px 0; border-top: 1px solid var(--rule); align-items: start; opacity: 0; transform: translateY(24px); transition: opacity var(--dur-cinema) var(--ease-out), transform var(--dur-cinema) var(--ease-out); }
+.gallery-row.revealed { opacity: 1; transform: translateY(0); }
+.gallery-row:last-child { border-bottom: 1px solid var(--rule); }
+.gallery-row .meta { padding-top: 8px; }
+.gallery-row .num { font-size: 11px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); margin-bottom: 20px; }
+.gallery-row h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(36px, 5vw, 64px); line-height: 1.0; letter-spacing: -0.015em; color: var(--white); margin: 0 0 16px; }
+.gallery-row .desc { color: var(--ash); font-size: 15px; line-height: 1.65; max-width: 360px; margin: 0 0 24px; }
+.gallery-row .more { font-size: 11px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--bone); border-bottom: 1px solid var(--rule); padding-bottom: 4px; display: inline-block; transition: border-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out); }
+.gallery-row .more:hover { color: var(--white); border-color: var(--white); }
+.gallery-row .more .arr { display: inline-block; margin-left: 8px; transition: transform var(--dur-base) var(--ease-out); }
+.gallery-row .more:hover .arr { transform: translateX(4px); }
+
+.gallery-row .preview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  align-items: stretch;
+}
+.gallery-row .preview .ph { position: relative; background-color: #0a0a0a; overflow: hidden; }
+/* Left: one tall vertical spanning both rows */
+.gallery-row .preview .ph.ph-tall { grid-column: 1; grid-row: 1 / span 2; aspect-ratio: 4 / 5; }
+/* Right: two horizontals stacked, each occupying one row.
+   Their combined height equals the tall slot's height — a clean rectangle. */
+.gallery-row .preview .ph.ph-wide:nth-child(2) { grid-column: 2; grid-row: 1; }
+.gallery-row .preview .ph.ph-wide:nth-child(3) { grid-column: 2; grid-row: 2; }
+.gallery-row .preview .ph .frame { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #0a0a0a; opacity: 0; transition: opacity 1600ms cubic-bezier(0.33, 0, 0.2, 1), transform 9s cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform; }
+.gallery-row .preview .ph .frame.active { opacity: 1; }
+.gallery-row:hover .preview .ph .frame.active { transform: scale(1.04); }
+
+@media (max-width: 760px) {
+  .gallery-row { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
+  /* Keep the SAME shape as desktop: tall vertical on the left spanning both
+     rows, two horizontals stacked on the right. Just rely on the columns
+     from the base rule — do NOT override the tall slot to full-width, which
+     would letterbox-crop the portrait. */
+}
+
+/* ---------- Gallery page header ---------- */
+.gallery-head { padding: 80px 0 48px; display: grid; grid-template-columns: auto 1fr auto; gap: 48px; align-items: end; border-bottom: 1px solid var(--rule); }
+.gallery-head h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(48px, 7vw, 96px); line-height: 1.0; letter-spacing: -0.02em; color: var(--white); margin: 0; }
+.gallery-head .num, .gallery-head .count { font-size: 11px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); padding-bottom: 14px; }
+.gallery-head .count { text-align: right; min-width: 80px; }
+@media (max-width: 640px) { .gallery-head { grid-template-columns: 1fr; gap: 12px; padding: 56px 0 32px; } .gallery-head .num, .gallery-head .count { padding-bottom: 0; text-align: left; } }
+
+/* ============================================================
+   PHOTOGRAPHER GALLERY — justified rows (Flickr / 500px style)
+   Each row is a flex line of photos scaled to a shared height,
+   filling the full container width edge-to-edge. Photos keep
+   their true aspect ratio — never cropped, never stranded with
+   black gaps. Widths are computed in JS and set inline.
+   ============================================================ */
+.justified {
+  padding: 48px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rowgap, 14px);
+}
+.justified .grow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* gap set inline per row to match JS gap */
+}
+.justified .grow.partial { justify-content: flex-start; }
+.justified figure.gphoto {
+  position: relative;
+  margin: 0;
+  /* flex set inline by JS: full rows grow to fill; partial rows stay fixed */
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.justified figure.gphoto .pic {
+  position: relative;
+  background: #0a0a0a;
+  overflow: hidden;
+  width: 100%;
+  /* aspect-ratio set inline = photo's true ratio; height follows width */
+  cursor: zoom-in;
+}
+.justified figure.gphoto .pic img {
+  width: 100%; height: 100%;
+  object-fit: cover;       /* box matches the photo's own ratio, so no crop */
+  opacity: 0;
+  transition: opacity var(--dur-cinema) var(--ease-out), transform 1.6s var(--ease-out);
+}
+.justified figure.gphoto .pic img.loaded { opacity: 1; }
+.justified figure.gphoto:hover .pic img { transform: scale(1.03); }
+
+/* Play badge on video cells */
+.justified figure.gphoto.is-video .play-badge {
+  position: absolute; inset: 0; z-index: 4;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+}
+.justified figure.gphoto.is-video .play-badge svg {
+  width: 64px; height: 64px;
+  fill: rgba(255,255,255,0.92);
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.55));
+  transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out);
+  opacity: 0.85;
+}
+.justified figure.gphoto.is-video:hover .play-badge svg { transform: scale(1.12); opacity: 1; }
+@media (max-width: 560px) { .justified figure.gphoto.is-video .play-badge svg { width: 44px; height: 44px; } }
+
+/* Caption beneath each photo — number only, appears on hover */
+.justified figure.gphoto figcaption {
+  margin-top: 10px;
+  display: flex; justify-content: flex-end;
+  font-size: 10px; letter-spacing: var(--ls-overline); text-transform: uppercase;
+  color: var(--smoke);
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.justified figure.gphoto:hover figcaption { opacity: 1; transform: translateY(0); }
+.justified figure.gphoto figcaption .num { font-variant-numeric: tabular-nums; }
+
+/* Transparent click guard above each image — blocks right-click + drag,
+   and is the click target that opens the lightbox. */
+.justified figure.gphoto .guard,
+.about .portrait .guard {
+  position: absolute; inset: 0; z-index: 5;
+  background: transparent;
+  cursor: zoom-in;
+  -webkit-user-drag: none;
+}
+/* Lightbox guard: covers only the CENTER so it never overlaps the
+   left/right navigation arrow zones (84px each side). */
+.lightbox .guard {
+  position: absolute;
+  top: 0; bottom: 0; left: 84px; right: 84px;
+  z-index: 5;
+  background: transparent;
+  cursor: zoom-in;
+  -webkit-user-drag: none;
+}
+@media (max-width: 640px) {
+  .lightbox .guard { left: 56px; right: 56px; }
+}
+
+@media (max-width: 560px) {
+  .justified { padding: 32px 0 24px; }
+  .justified figure.gphoto figcaption { font-size: 9px; }
+}
+
+/* ---------- Lightbox (true fullscreen + zoom) ---------- */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.97);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  z-index: 1000;
+  display: none; align-items: center; justify-content: center;
+  padding: 0;
+  opacity: 0; transition: opacity var(--dur-base) var(--ease-out);
+  user-select: none;
+}
+.lightbox.open { display: flex; opacity: 1; }
+
+/* Stage holds the image — fills the viewport area between the chrome */
+.lb-stage {
+  position: relative;
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.lb-stage.zoomed { cursor: grab; }
+.lb-stage.zoomed:active { cursor: grabbing; }
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  transform-origin: center center;
+  transition: transform 240ms var(--ease-out);
+  display: block;
+}
+.lightbox video {
+  max-width: 92vw; max-height: 88vh;
+  width: auto; height: auto;
+  object-fit: contain; display: block;
+  background: #000; z-index: 10;
+}
+.lightbox.dragging img { transition: none; }
+
+.lightbox .lb-cap { position: fixed; left: 0; right: 0; bottom: 24px; text-align: center; color: var(--ash); font-size: 12px; letter-spacing: 0.06em; -webkit-user-select: text; user-select: text; z-index: 20; }
+.lightbox .lb-close, .lightbox .lb-zoom-btn {
+  position: fixed; background: none; border: none; color: var(--ash);
+  cursor: pointer; padding: 8px 12px; font-weight: 300; line-height: 1;
+  z-index: 30;                 /* always above the image guard */
+}
+.lightbox .lb-close { top: 24px; right: 28px; font-size: 28px; }
+.lightbox .lb-zoom-btn { top: 28px; right: 76px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--smoke); }
+.lightbox .lb-zoom-btn:hover, .lightbox .lb-close:hover { color: var(--white); }
+.lightbox .lb-nav {
+  position: fixed;
+  top: 72px;          /* clear the close (X) + zoom buttons at the top */
+  bottom: 64px;       /* clear the caption at the bottom */
+  transform: none;
+  display: flex; align-items: center; justify-content: center;
+  width: 84px;
+  background: none; border: none; color: var(--ash);
+  font-size: 32px; font-family: var(--font-display);
+  cursor: pointer; font-weight: 300; line-height: 1;
+  z-index: 25;        /* above the image guard (5), below close/zoom (30) */
+}
+.lightbox .lb-nav:hover { color: var(--white); }
+.lightbox .lb-prev { left: 0; justify-content: flex-start; padding-left: 24px; }
+.lightbox .lb-next { right: 0; justify-content: flex-end; padding-right: 24px; }
+.lightbox .lb-count { position: fixed; top: 28px; left: 28px; font-size: 11px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); z-index: 30; }
+
+@media (max-width: 640px) {
+  .lightbox img { max-width: 96vw; max-height: 84vh; }
+  .lightbox .lb-nav { font-size: 24px; width: 56px; top: 64px; bottom: 56px; }
+  .lightbox .lb-prev { padding-left: 8px; }
+  .lightbox .lb-next { padding-right: 8px; }
+  .lightbox .lb-zoom-btn { right: 60px; }
+}
+
+/* ---------- About page ---------- */
+.about {
+  padding: 96px 0 64px;
+  display: grid; grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: clamp(32px, 6vw, 96px); align-items: start;
+}
+
+/* PORTRAIT — small, natural-feeling editorial portrait.
+   Image displays at its native aspect, capped at column width and a sensible
+   max-height so it never dominates the page or feels "zoomed in." */
+.about .portrait {
+  position: relative;
+  display: block;
+  background: transparent;
+  line-height: 0;
+  width: 100%;
+  max-width: 360px;
+}
+.about .portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;      /* never crop; preserve full image */
+  object-position: center;
+}
+.about .copy h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(40px, 5vw, 72px); line-height: 1.05; letter-spacing: -0.015em; color: var(--white); margin: 0 0 32px; }
+.about .copy p { color: var(--ash); font-size: 17px; line-height: 1.7; margin: 0 0 20px; max-width: 560px; }
+.about .copy p strong { color: var(--white); font-weight: 400; }
+.about .copy .contact { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 480px; }
+.about .copy .contact .label { font-size: 10px; letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--smoke); margin-bottom: 6px; }
+.about .copy .contact .val { color: var(--bone); font-size: 14px; }
+
+@media (max-width: 860px) {
+  .about { grid-template-columns: 1fr; gap: 32px; padding: 56px 0 32px; }
+  .about .portrait { max-width: 280px; }
+  .about .portrait img { max-height: 400px; }
+}

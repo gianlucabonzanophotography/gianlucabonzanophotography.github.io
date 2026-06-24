@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Site — About" subtitle="Portrait + bio + contact placeholders" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title data-title-suffix="About">About — Gianluca Bonzano</title>
+<link rel="stylesheet" href="styles.css?v=1782345482" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <span data-bind="site.wordmark_first">Gianluca</span><span class="dot"></span><span data-bind="site.wordmark_last">Bonzano</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="landscape.html">Landscape</a>
+      <a href="cityscape.html">Cityscape</a>
+      <a href="street.html">Street & Portrait</a>
+      <a href="video.html">Video</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="about">
+    <div class="portrait">
+      <img data-bind-src="site.portrait_image" alt="Portrait" />
+      <div class="guard"></div>
+    </div>
+    <div class="copy">
+      <span class="overline" style="display:block;margin-bottom:24px;">About</span>
+      <h1 data-bind="about.title">A note from the photographer.</h1>
+      <div data-bind-paragraphs="about.paragraphs"></div>
+
+      <div class="contact">
+        <div>
+          <div class="label">Contact</div>
+          <div class="val" data-bind="site.contact.email">— add your details —</div>
+        </div>
+        <div>
+          <div class="label">Based in</div>
+          <div class="val" data-bind="site.contact.based_in">— add your details —</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col">
+      <span class="label" data-bind="site.footer_copyright">© Gianluca Bonzano</span>
+      <span class="legal" data-bind="site.footer_legal">All photographs · 2019 — 2026</span>
+    </div>
+    <div class="col">
+      <span class="label">Index</span>
+      <a class="val" href="landscape.html">Landscape</a>
+      <a class="val" href="cityscape.html">Cityscape</a>
+      <a class="val" href="street.html">Street & Portrait</a>
+    </div>
+  </div>
+</footer>
+
+<script src="photos.js?v=1782345482"></script>
+</body>
+</html>

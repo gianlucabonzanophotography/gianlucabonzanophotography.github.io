@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Site — Cityscape" subtitle="Mosaic gallery, click for lightbox" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title data-title-suffix="Cityscape">Cityscape — Gianluca Bonzano</title>
+<link rel="stylesheet" href="styles.css?v=1782345482" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <span data-bind="site.wordmark_first">Gianluca</span><span class="dot"></span><span data-bind="site.wordmark_last">Bonzano</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="landscape.html">Landscape</a>
+      <a href="cityscape.html" aria-current="page">Cityscape</a>
+      <a href="street.html">Street</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <header class="gallery-head">
+    <span class="num">No. <span data-bind="galleries.cityscape.number">02</span></span>
+    <h1 data-bind="galleries.cityscape.title">Cityscape.</h1>
+    <span class="count" data-photo-count></span>
+  </header>
+
+  <div class="mosaic" id="mosaic"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col">
+      <span class="label" data-bind="site.footer_copyright">© Gianluca Bonzano</span>
+      <span class="legal" data-bind="site.footer_legal">All photographs · 2019 — 2026</span>
+    </div>
+    <div class="col">
+      <span class="label">Next series</span>
+      <a class="val" href="street.html">Street →</a>
+    </div>
+  </div>
+</footer>
+
+<script>window.__MOSAIC = { set: "cityscape", mount: "mosaic" };</script>
+<script src="photos.js?v=1782345482"></script>
+</body>
+</html>

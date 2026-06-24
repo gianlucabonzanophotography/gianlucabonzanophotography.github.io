@@ -1,0 +1,25 @@
+{
+  "video": [
+    {
+      "src": "videos/001-filippines-land.mp4",
+      "poster": "images/video/001-filippines-land.jpg",
+      "title": "",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "src": "videos/002-filippines-sea.mp4",
+      "poster": "images/video/002-filippines-sea.jpg",
+      "title": "",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "src": "videos/003-indonesia.mp4",
+      "poster": "images/video/003-indonesia.jpg",
+      "title": "",
+      "w": 1920,
+      "h": 1080
+    }
+  ]
+}

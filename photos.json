@@ -1,0 +1,200 @@
+{
+  "landscape": [
+    {
+      "src": "images/landscape/001-alba-belvedere.jpg",
+      "title": "Alba belvedere",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/landscape/002-casolare-marche.jpg",
+      "title": "Casolare marche",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/landscape/003-chiesetta1.jpg",
+      "title": "Chiesetta1",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/landscape/004-dji-20251121171536-0057-d.jpg",
+      "title": "DJI 20251121171536 0057 D",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/landscape/005-dji-20260607175418-0058-d.jpg",
+      "title": "DJI 20260607175418 0058 D",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/landscape/006-lago-nero-brenta.jpg",
+      "title": "Lago nero brenta",
+      "meta": "",
+      "span": "span-12"
+    },
+    {
+      "src": "images/landscape/007-passo-giau-2.jpg",
+      "title": "Passo Giau 2",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/landscape/008-provenza.jpg",
+      "title": "Provenza",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/landscape/009-scoglio-carloforte.jpg",
+      "title": "Scoglio carloforte",
+      "meta": "",
+      "span": "span-8"
+    }
+  ],
+  "cityscape": [
+    {
+      "src": "images/cityscape/001-brooklin.jpg",
+      "title": "Brooklin",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/cityscape/002-corridoio-alcazhar.jpg",
+      "title": "Corridoio Alcazhar",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/cityscape/003-dji-20251126160524-0162-d-denoise.jpg",
+      "title": "DJI 20251126160524 0162 D denoise",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/cityscape/004-img-2074-2.jpg",
+      "title": "IMG 2074 2",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/cityscape/005-img-5449.jpg",
+      "title": "IMG 5449",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/cityscape/006-img-8320-denoise.jpg",
+      "title": "IMG 8320 denoise",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/cityscape/007-img-8444-denoise.jpg",
+      "title": "IMG 8444 denoise",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/cityscape/008-ny-panorama-v2.jpg",
+      "title": "Ny panorama v2",
+      "meta": "",
+      "span": "span-12"
+    },
+    {
+      "src": "images/cityscape/009-senza-titolo1-4.jpg",
+      "title": "Senza titolo1 4",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/cityscape/010-theshard-2-denoisev2.jpg",
+      "title": "Theshard 2 denoisev2",
+      "meta": "",
+      "span": "span-8"
+    }
+  ],
+  "street": [
+    {
+      "src": "images/street/001-0u6a0014-converted.jpg",
+      "title": "0U6A0014 converted",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/street/002-0u6a0508-denoise.jpg",
+      "title": "0U6A0508 denoise",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/street/003-0u6a0647-denoise.jpg",
+      "title": "0U6A0647 denoise",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/street/004-0u6a0668-denoise.jpg",
+      "title": "0U6A0668 denoise",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/street/005-0u6a0955-denoise2.jpg",
+      "title": "0U6A0955 denoise2",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/street/006-0u6a9180-converted.jpg",
+      "title": "0U6A9180 converted",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/street/007-0u6a9205-converted.jpg",
+      "title": "0U6A9205 converted",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/street/008-0u6a9566-converted.jpg",
+      "title": "0U6A9566 converted",
+      "meta": "",
+      "span": "span-4"
+    },
+    {
+      "src": "images/street/009-0u6a9830-converted-denoise.jpg",
+      "title": "0U6A9830 converted denoise",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/street/010-0u6a9948-converted.jpg",
+      "title": "0U6A9948 converted",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/street/011-0u6a9971-converted.jpg",
+      "title": "0U6A9971 converted",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/street/012-baker-street.jpg",
+      "title": "Baker street",
+      "meta": "",
+      "span": "span-8"
+    },
+    {
+      "src": "images/street/013-paris-clock.jpg",
+      "title": "Paris clock",
+      "meta": "",
+      "span": "span-4"
+    }
+  ]
+}

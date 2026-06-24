@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Site — Homepage" subtitle="Cinema-mode portfolio with crossfading gallery teasers" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title data-title-suffix="">Gianluca Bonzano — Photography</title>
+<meta name="description" content="Photography. Landscape, Cityscape, Street." />
+<link rel="stylesheet" href="styles.css?v=1782345482" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <span data-bind="site.wordmark_first">Gianluca</span><span class="dot"></span><span data-bind="site.wordmark_last">Bonzano</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="landscape.html">Landscape</a>
+      <a href="cityscape.html">Cityscape</a>
+      <a href="street.html">Street & Portrait</a>
+      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-img" data-bind-bg="site.hero_image"></div>
+    <div class="hero-content">
+      <h1 class="hero-name">
+        <span data-bind="site.wordmark_first">Gianluca</span><br/><span data-bind="site.wordmark_last">Bonzano</span>
+      </h1>
+      <div class="hero-meta">
+        <div class="item">
+          <div class="label">Practice</div>
+          <div class="val" data-bind="site.tagline_practice">Landscape · Cityscape · Street</div>
+        </div>
+        <div class="item">
+          <div class="label">Selected work</div>
+          <div class="val" data-bind="site.tagline_period">2019 — present</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galleries-index wrap">
+    <div class="section-head">
+      <span class="num">Index</span>
+      <span class="num">Three series</span>
+    </div>
+
+    <a class="gallery-row" data-gallery="landscape" href="landscape.html" style="text-decoration:none;color:inherit;">
+      <div class="meta">
+        <div class="num">No. <span data-bind="galleries.landscape.number">01</span></div>
+        <h2 data-bind="galleries.landscape.title">Landscape.</h2>
+        <p class="desc" data-bind="galleries.landscape.blurb_home">…</p>
+        <span class="more">View series <span class="arr">→</span></span>
+      </div>
+      <div class="preview">
+        <div class="ph ph-tall"></div>
+        <div class="ph ph-wide"></div>
+        <div class="ph ph-wide"></div>
+      </div>
+    </a>
+
+    <a class="gallery-row" data-gallery="cityscape" href="cityscape.html" style="text-decoration:none;color:inherit;">
+      <div class="meta">
+        <div class="num">No. <span data-bind="galleries.cityscape.number">02</span></div>
+        <h2 data-bind="galleries.cityscape.title">Cityscape.</h2>
+        <p class="desc" data-bind="galleries.cityscape.blurb_home">…</p>
+        <span class="more">View series <span class="arr">→</span></span>
+      </div>
+      <div class="preview">
+        <div class="ph ph-tall"></div>
+        <div class="ph ph-wide"></div>
+        <div class="ph ph-wide"></div>
+      </div>
+    </a>
+
+    <a class="gallery-row" data-gallery="street" href="street.html" style="text-decoration:none;color:inherit;">
+      <div class="meta">
+        <div class="num">No. <span data-bind="galleries.street.number">03</span></div>
+        <h2 data-bind="galleries.street.title">Street & Portrait.</h2>
+        <p class="desc" data-bind="galleries.street.blurb_home">…</p>
+        <span class="more">View series <span class="arr">→</span></span>
+      </div>
+      <div class="preview">
+        <div class="ph ph-tall"></div>
+        <div class="ph ph-wide"></div>
+        <div class="ph ph-wide"></div>
+      </div>
+    </a>
+
+    <a class="gallery-row" data-gallery="video" data-kind="video" href="video.html" style="text-decoration:none;color:inherit;">
+      <div class="meta">
+        <div class="num">No. <span data-bind="galleries.video.number">04</span></div>
+        <h2 data-bind="galleries.video.title">Video.</h2>
+        <p class="desc" data-bind="galleries.video.blurb_home">…</p>
+        <span class="more">View series <span class="arr">→</span></span>
+      </div>
+      <div class="preview">
+        <div class="ph ph-tall"></div>
+        <div class="ph ph-wide"></div>
+        <div class="ph ph-wide"></div>
+      </div>
+    </a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col">
+      <span class="label" data-bind="site.footer_copyright">© Gianluca Bonzano</span>
+      <span class="legal" data-bind="site.footer_legal">All photographs · 2019 — 2026</span>
+    </div>
+    <div class="col">
+      <span class="label">Contact</span>
+      <span class="val" data-bind="site.contact.email">— add your details —</span>
+    </div>
+    <div class="col">
+      <span class="label">Index</span>
+      <a class="val" href="landscape.html">Landscape</a>
+      <a class="val" href="cityscape.html">Cityscape</a>
+      <a class="val" href="street.html">Street & Portrait</a>
+    </div>
+  </div>
+</footer>
+
+<script src="photos.js?v=1782345482"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Auto-managed by build.py — keep source/large files out of the repo.
+*.mov
+*.MOV
+*.avi
+*.AVI
+*.mkv
+*.MKV
+# Editor / OS noise
+.DS_Store
+Thumbs.db
